@@ -9,20 +9,31 @@
 
     <context:component-scan base-package="org.spring_demo"/>
 
-
-    <bean name="Baseball" id="23" class="org.spring_demo.BaseballCoach">
+    <bean name="Baseball" id="23" class="org.spring_demo.BaseballCoach"  >
     </bean>
 
     <bean name="Cricket" id="33" class="org.spring_demo.CricketCoach"/>
 
+<!--    <bean name="PP" id="44" class="org.spring_demo.Person" init-method="init" destroy-method="destroy">-->
+<!--        <constructor-arg name="name" value="sara" />-->
+<!--        <constructor-arg name="family" value="babaei"/>-->
+<!--        <constructor-arg name="age" value="22"/>-->
+<!--        <constructor-arg name="book"  ref="2"/>-->
+<!--    </bean>-->
 
-<bean name="Person" id="44" class="org.spring_demo.Person">
-   <constructor-arg name="name" value="Sara" />
-   <constructor-arg name="family" value="babaei" />
-   <constructor-arg name="age" value="24" />
+    <bean name="Book" id="2" class="org.spring_demo.Book">
+        <constructor-arg name="name" value="lovestory"/>
+    </bean>
+
+<bean id="myFortune" class="org.spring_demo.HappyFortuneService"></bean>
+
+
+
+<bean id="myCoach" class="org.spring_demo.TrackCoach">
+    <constructor-arg name="fortuneService1" ref="myFortune"/>
 </bean>
 
 
-<bean  />
 
 </beans>
+

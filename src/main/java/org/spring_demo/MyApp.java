@@ -1,28 +1,46 @@
 package org.spring_demo;
-import org.springframework.context.ApplicationContext;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class MyApp {
     public static void main(String[] args) {
-        // create the object
-        Coach baseballCoach = new BaseballCoach();
-        // method call
-        System.out.println(baseballCoach.getDailyWorkout());
+//        // create the object
+//        Coach baseballCoach = new BaseballCoach();
+//        // method call
+//        System.out.println(baseballCoach.getDailyWorkout());
+//
+//        Coach trackCoach = new TrackCoach();
+//        System.out.println(trackCoach.getDailyWorkout());
+//
+//
+//        Coach cricketCoach = new CricketCoach();
+//        System.out.println(cricketCoach.getDailyWorkout());
+//
+//        Coach hockeyCoach = new HockeyCoach();
+//        System.out.println(hockeyCoach.getDailyWorkout());
+//
+//
+//        Coach tennisCoach = new TennisCoach();
+//        System.out.println(tennisCoach.getDailyWorkout());
 
-        Coach trackCoach = new TrackCoach();
-        System.out.println(trackCoach.getDailyWorkout());
+        ClassPathXmlApplicationContext classPathXmlApplicationContext =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
 
 
-        Coach cricketCoach = new CricketCoach();
-        System.out.println(cricketCoach.getDailyWorkout());
+        Coach theCoach = (Coach) classPathXmlApplicationContext.getBean("myCoach" );
 
-        Coach hockeyCoach = new HockeyCoach();
-        System.out.println(hockeyCoach.getDailyWorkout());
+       // System.out.println(theCoach.getDailyWorkout());
+
+        System.out.println(theCoach.getDailyWorkout());
+        System.out.println(theCoach.getDailyFortune());
 
 
-        Coach tennisCoach = new TennisCoach();
-        System.out.println(tennisCoach.getDailyWorkout());
 
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        applicationContext.close();
+//        Person person = (Person) classPathXmlApplicationContext.getBean("PP");
+//
+//        System.out.println(person);
+//        person = null;
+//        System.gc();
+        classPathXmlApplicationContext.close();
     }
 }

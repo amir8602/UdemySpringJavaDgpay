@@ -5,4 +5,9 @@ public class CricketCoach implements Coach{
     public String getDailyWorkout() {
         return "Get cricket";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }
