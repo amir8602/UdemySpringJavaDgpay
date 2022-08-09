@@ -6,7 +6,6 @@ public class TrackCoach implements Coach{
 
     public TrackCoach(HappyFortuneService fortuneService1) {
         this.fortuneService=fortuneService1;
-
     }
 
 
@@ -17,8 +16,6 @@ public class TrackCoach implements Coach{
     @Override
     public String getDailyWorkout() {
         return "Run a hard 5k";
-
-
     }
 
     @Override

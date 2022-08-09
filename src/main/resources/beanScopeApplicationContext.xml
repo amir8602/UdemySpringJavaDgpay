@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--&lt;!&ndash;    <context:property-placeholder location="classpath:foo.properties"/>&ndash;&gt;-->
+<!--    <context:component-scan base-package="org.spring_demo"/>-->
+
+<!--    <bean name="Baseball" id="23" class="org.spring_demo.BaseballCoach"  >-->
+<!--    </bean>-->
+
+<!--    <bean name="Cricket" id="33" class="org.spring_demo.CricketCoach"/>-->
+
+<!--&lt;!&ndash;    <bean name="PP" id="44" class="org.spring_demo.Person" init-method="init" destroy-method="destroy">&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="name" value="sara" />&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="family" value="babaei"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="age" value="22"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="book"  ref="2"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <bean name="Book" id="2" class="org.spring_demo.Book">&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg name="name" value="${foo.nameeeeeeeee}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="name" value="${foo.familyyyyyyyyyyyyyyyy}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+
+<!--<bean id="myFortune" class="org.spring_demo.HappyFortuneService"></bean>-->
+
+
+
+<!--<bean id="myCoach" class="org.spring_demo.TrackCoach" scope="prototype">-->
+<!--    <constructor-arg name="fortuneService1" ref="myFortune"/>-->
+<!--</bean>-->
+
+<!--&lt;!&ndash;    <bean id="myCricketCoach" class="org.spring_demo.CricketCoach">&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="fortuneService" ref="myFortune"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+
+
+</beans>

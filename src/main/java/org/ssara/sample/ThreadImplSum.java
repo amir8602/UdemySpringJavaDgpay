@@ -1,29 +1,29 @@
-//package org.ssara.sample;
-//
-//public class ThreadImplSum extends Thread {
-//    private final Integer first;
-//    private final Integer second;
-//    private Integer sum;
-//
-//    public ThreadImplSum(Integer first, Integer second) {
-//        this.first = first;
-//        this.second = second;
-//    }
-//
-//    @Override
-//    public void run() {
-//        sum = first + second;
-//    }
-//
-//    public Integer getFirst() {
-//        return first;
-//    }
-//
-//    public Integer getSecond() {
-//        return second;
-//    }
-//
-//    public Integer getSum() {
-//        return sum;
-//    }
-//}
+package org.ssara.sample;
+
+public class ThreadImplSum extends Thread {
+    private final Integer operandOne;
+    private final Integer operandTwo;
+    private Integer sum;
+
+    public ThreadImplSum(Integer operandOne, Integer operandTwo) {
+        this.operandOne = operandOne;
+        this.operandTwo = operandTwo;
+    }
+
+    @Override
+    public void run() {
+        sum = operandOne + operandTwo;
+    }
+
+    public Integer getOperandOne() {
+        return operandOne;
+    }
+
+    public Integer getOperandTwo() {
+        return operandTwo;
+    }
+
+    public Integer getSum() {
+        return sum;
+    }
+}

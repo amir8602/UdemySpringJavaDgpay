@@ -31,10 +31,12 @@ public class MyApp {
 
        // System.out.println(theCoach.getDailyWorkout());
 
-        System.out.println(theCoach.getDailyWorkout());
-        System.out.println(theCoach.getDailyFortune());
+//        System.out.println(theCoach.getDailyWorkout());
+//        System.out.println(theCoach.getDailyFortune());
 
-
+        Coach coach = (Coach) classPathXmlApplicationContext.getBean("myCricketCoach",CricketCoach.class);
+        System.out.println(coach.getDailyWorkout());
+        System.out.println(coach.getDailyFortune());
 
 //        Person person = (Person) classPathXmlApplicationContext.getBean("PP");
 //

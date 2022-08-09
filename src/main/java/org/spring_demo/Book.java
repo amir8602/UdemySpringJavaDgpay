@@ -20,6 +20,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return  name ;
+        return "Book{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

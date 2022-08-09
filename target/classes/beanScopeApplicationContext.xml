@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:foo.properties"/>
+<!--    <context:property-placeholder location="classpath:foo.properties"/>-->
     <context:component-scan base-package="org.spring_demo"/>
 
     <bean name="Baseball" id="23" class="org.spring_demo.BaseballCoach"  >
@@ -22,22 +22,22 @@
 <!--        <constructor-arg name="book"  ref="2"/>-->
 <!--    </bean>-->
 
-    <bean name="Book" id="2" class="org.spring_demo.Book">
-        <constructor-arg name="name" value="${foo.nameeeeeeeee}"/>
-        <property name="name" value="${foo.familyyyyyyyyyyyyyyyy}"/>
-    </bean>
+<!--    <bean name="Book" id="2" class="org.spring_demo.Book">-->
+<!--        <constructor-arg name="name" value="${foo.nameeeeeeeee}"/>-->
+<!--        <property name="name" value="${foo.familyyyyyyyyyyyyyyyy}"/>-->
+<!--    </bean>-->
 
 <bean id="myFortune" class="org.spring_demo.HappyFortuneService"></bean>
 
 
 
-<bean id="myCoach" class="org.spring_demo.TrackCoach">
+<bean id="myCoach" class="org.spring_demo.TrackCoach" scope="prototype">
     <constructor-arg name="fortuneService1" ref="myFortune"/>
 </bean>
 
-    <bean id="myCricketCoach" class="org.spring_demo.CricketCoach">
-        <property name="fortuneService" ref="myFortune"/>
-    </bean>
+<!--    <bean id="myCricketCoach" class="org.spring_demo.CricketCoach">-->
+<!--        <property name="fortuneService" ref="myFortune"/>-->
+<!--    </bean>-->
 
 
 </beans>

@@ -1,29 +1,29 @@
-//package org.ssara.sample;
-//
-//public class ThreadImplMul extends Thread {
-//    private final Integer first;
-//    private final Integer second;
-//    private Integer multiplication;
-//
-//    @Override
-//    public void run() {
-//        multiplication = first * second;
-//    }
-//
-//    public ThreadImplMul(Integer first , Integer second){
-//        this.first = first;
-//        this.second=second;
-//    }
-//
-//    public Integer getFirst() {
-//        return first;
-//    }
-//
-//    public Integer getSecond() {
-//        return second;
-//    }
-//
-//    public Integer getMultiplication() {
-//        return multiplication;
-//    }
-//}
+package org.ssara.sample;
+
+public class ThreadImplMul extends Thread {
+    private final Integer operandOne;
+    private final Integer operandTwo;
+    private Integer multiplication;
+
+    @Override
+    public void run() {
+        multiplication = operandOne * operandTwo;
+    }
+
+    public ThreadImplMul(Integer operandOne, Integer operandTwo){
+        this.operandOne = operandOne;
+        this.operandTwo = operandTwo;
+    }
+
+    public Integer getOperandOne() {
+        return operandOne;
+    }
+
+    public Integer getOperandTwo() {
+        return operandTwo;
+    }
+
+    public Integer getMultiplication() {
+        return multiplication;
+    }
+}
