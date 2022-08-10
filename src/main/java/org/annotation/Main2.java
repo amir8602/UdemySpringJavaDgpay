@@ -10,17 +10,29 @@ public class Main2 {
         AnnotationConfigApplicationContext annotationConfigApplicationContext =
                 new AnnotationConfigApplicationContext(SportConfig.class);
 
-        Coach tennisCoach = (Coach) annotationConfigApplicationContext.getBean("tennisCoach");
+//        Coach tennisCoach = (Coach) annotationConfigApplicationContext.getBean("tennisCoach");
+//
+//        Coach alphaCoach = (Coach) annotationConfigApplicationContext.getBean("tennisCoach");
+//
+//        boolean result = (tennisCoach == alphaCoach);
+//
+//        System.out.println(result);
+//        System.out.println(tennisCoach);
+//        System.out.println(alphaCoach);
+//        tennisCoach = null;
+//        alphaCoach = null;
 
-        Coach alphaCoach = (Coach) annotationConfigApplicationContext.getBean("tennisCoach");
+        SwimCoach coach =
+                (SwimCoach) annotationConfigApplicationContext.getBean("swimCoach");
+        System.out.println(coach.getDailyFortune());
+        System.out.println(coach.getDailyWorkout());
 
-        boolean result = (tennisCoach == alphaCoach);
+        System.out.println(coach.getEmail());
+        System.out.println(coach.getTeam());
 
-        System.out.println(result);
-        System.out.println(tennisCoach);
-        System.out.println(alphaCoach);
-        tennisCoach = null;
-        alphaCoach = null;
         annotationConfigApplicationContext.close();
+
+
+
     }
 }
